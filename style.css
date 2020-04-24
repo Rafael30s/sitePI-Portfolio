@@ -1,0 +1,136 @@
+body{
+   margin: 0;
+   border: 0;
+   padding: 0;
+   background: #4A738C;
+   /*background: #8E9EBF; */
+   font-family: 'Pacifico', cursive;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container2{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #0D0D0D;
+    width: 100%;
+    height: 50px;
+    padding-top: 1px;
+    color: #8C1915;
+    border-bottom: #972219 3px solid;
+    
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color:#F2F2F2;
+    font-weight: bold;
+    padding: 0px 3px 0px;
+}
+
+.nav{
+    
+    float: right;
+}
+
+.titulo {
+    float: left;
+    color:#F2F2F2;
+    margin: auto;
+}
+
+.titulo span{ 
+   color: beige(255, 255, 255);
+   font-family: 'Lobster', cursive;
+   font-family: 'Acme', sans-serif;
+   font-family: 'Inknut Antiqua', serif;
+   margin: 0;
+   font-family: 'Sen', sans-serif;
+}
+
+.footer {
+    text-align: center;
+    position: absolute;
+    background: #0D0D0D;
+    color: #8C1915;
+    width: 100%;
+    height: 25px;
+    padding-top: 5px 0px;
+    border-top: #972219 3px solid;
+}
+
+.showcase {
+    color:#8C1915;
+    min-height: 580px;
+    background: url(imagens/InfonRecorte.jpg);
+    text-align: center;
+    
+
+}
+
+.showcase h1{
+    margin: 0;
+}
+
+.box {
+    top: 90px;
+    width: 40%;
+    height: 90%;
+    background: rgba(242,242,244);
+    color: FFF;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    border-radius: 20px;
+    border: #1E3E59 1.5px solid;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -12.5%;
+    left: calc(50% - 50px);
+}
+.box input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.box input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #1E3E59;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #8C1915;
+    font-size: 16px;
+}
+.box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1E3E59;
+    color: #f2f2f2;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.box h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}

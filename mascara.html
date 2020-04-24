@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Portfolio Modelo</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div>
+                <h1 class="titulo"><span>Portofolio</span></h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li> <a href="">Projetos</a>
+                    </li>
+                   
+
+                    <li>
+                        <div class="dropdown">
+                            <img  onclick="Exibir()" src="imagens/RafaVetor5.jpg" class="dropbtn">
+
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="">Perfil</a>
+                                <a href="">Meus projetos</a>
+                                <a href="">Sair</a>
+                            </div>
+                    </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ports">
+            <div style="margin: 0 auto; text-align:center">
+                <h2>A MASCARA</h2> <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JidITcKCT0A" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function Exibir() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
