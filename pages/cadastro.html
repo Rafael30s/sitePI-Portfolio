@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Cadastro</title>
+    <script type="text/javascript" src="../Script/scripts.js"></script>
 </head>
 <body>
 
@@ -16,16 +17,16 @@
             <div class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li> <a href="cadastro.html">Cadastro</a>
+                    <li> <a href="../pages/cadastro.html">Cadastro</a>
                     </li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="../pages/login.html">Login</a></li>
                 </ul>
             </div>
         </div>
     </div>
     
     <div class="box">
-        <img src="imagens/batman-icon.png" alt="" class="avatar">
+        <img src="../imagens/batman-icon.png" alt="" class="avatar">
         <h1>Cadastro</h1>
         <form action="">
             <label for="">Nome:</label> <input type="text" id="nome"> <br>
@@ -33,7 +34,7 @@
             <label for="">Email:</label> <input type="text" id="email"> <br>
             <label for="">Senha:</label> <input type="text" id="senha"> <br>
             <label for="">Confirmação de senha:</label> <input type="text" id="confime"> <br>
-            <input type="submit" value="Cadastrar">
+            <input type="submit" value="Cadastrar" onclick="Cadastrar()">
             
         </form>
     </div>
@@ -45,6 +46,3 @@
     </div>
 </body>
 </html>
-<script>
-    
-</script>

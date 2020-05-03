@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" conent="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="../CSS/portfolio.css">
     <title>Infância Mascarada</title>
+    <script type="text/javascript" src="../Script/scripts.js"></script>
 </head>
 
 <body>
@@ -16,14 +17,14 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li> <a href="">Projetos</a>
                     </li>
                     
 
                     <li>
                         <div class="dropdown">
-                            <img  onclick="Exibir()" src="imagens/RafaVetor5.jpg" class="dropbtn">
+                            <img  onclick="Exibir()" src="../imagens/RafaVetor5.jpg" class="dropbtn">
 
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="">Perfil</a>
@@ -41,7 +42,7 @@
                 <h2>Infância Mascarada</h2>
                 <div class="autor"><b>Autor:</b> Rafael dos Santos</div>
             </div>
-            <img style="float: left;width: 250px; margin-top: 10px; margin-right: 20px;" src="imagens/starlord.jpg"
+            <img style="float: left;width: 250px; margin-top: 10px; margin-right: 20px;" src="../imagens/starlord.jpg"
                 alt="">
 
             <div class="container3">
@@ -57,7 +58,7 @@
                     Rousseau quando descreve a natureza humana.
                 </p>
             </div>
-            <img src="imagens/batman.jpg"  style="float: right;width: 250px; margin: 10px 20px" alt="">
+            <img src="../imagens/batman.jpg"  style="float: right;width: 250px; margin: 10px 20px" alt="">
             <div class="container3">
                 <p>
                     Durante o desenvolvimento das crianças, são apresentadas figuras a elas, na maioria são heróis. A
@@ -72,7 +73,7 @@
                     Homem-Aranha e no seu real poder, a empatia, que o torna mais forte e acima de tudo o torna humano.
                 </p>
             </div>
-            <img src="imagens/miranha.jpg" style="float: right;width: 350px; margin: 10px 20px" alt="">
+            <img src="../imagens/miranha.jpg" style="float: right;width: 350px; margin: 10px 20px" alt="">
         </div>
     </div>
 
@@ -80,24 +81,3 @@
 </body>
 
 </html>
-<script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function Exibir() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function (event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
-</script>
