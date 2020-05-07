@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
 body{
    margin: 0;
    border: 0;
    padding: 0;
    background: #4A738C;
    /*background: #8E9EBF; */
-   font-family: 'Pacifico', cursive;
+   font-family: 'Jost', sans-serif;
 }
 
 .container{
