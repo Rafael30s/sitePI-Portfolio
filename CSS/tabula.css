@@ -1,16 +1,15 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
 
 body{
     margin: 0;
     border: 0;
     padding: 0;
-    background: #f2f2ff;
+    background: #C9D5FF;
     /*
     background: #4A738C;
     /*background: #8E9EBF; */
     font-family: 'Jost', sans-serif;
-}
+ }
  
  .container{
      max-width: 1200px;
@@ -128,9 +127,9 @@ body{
 
   .ports{
       margin: 20px auto;
-      background: #EEEFF7;
+      background: rgba(242,242,244,0.2);
       max-width: 980px;
-      min-height: 10800px;
+      min-height: 800px;
       padding: 25px;
     border: #1E3E59 1.5px solid;
 
@@ -205,7 +204,12 @@ p{
 img{
     border: black 1px solid;
 }
-.legenda{
+.png {
+    border: none;
+}
 
-    text-align: center;
- }
+.historia{
+    text-align: justify;
+    max-width: 740px; 
+    margin: 0 auto;
+}
