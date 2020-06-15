@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Lobster&family=Squada+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Cadastro</title>
-    <script type="text/javascript" src="../Script/scripts.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="../CSS/formulario.css">
 
-    <div class="header">
-        <div class="container">
-            <div>
-                <h1 class="titulo"><span>Portofolio</span></h1>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li> <a href="../pages/cadastro.html">Cadastro</a>
-                    </li>
-                    <li><a href="../pages/login.html">Login</a></li>
-                </ul>
-            </div>
-        </div>
+    <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
+
+    <title>Stories Kingdom</title>
+</head>
+
+<body>
+    <div id="header2">
+        <header>
+            <span class="logo">Stories<span>Kingdom</span></span> <a href="/"><span></span> Voltar para home</a>
+        </header>
     </div>
-    
-    <div class="box">
-        <img src="../imagens/batman-icon.png" alt="" class="avatar">
-        <h1>Cadastro</h1>
-        <form action="">
-            <label for="">Nome:</label> <input type="text" id="nome"> <br>
-            <label for="">Username:</label> <input type="text" id="username"> <br>
-            <label for="">Email:</label> <input type="text" id="email"> <br>
-            <label for="">Senha:</label> <input type="text" id="senha"> <br>
-            <label for="">Confirmação de senha:</label> <input type="text" id="confime"> <br>
-            <input type="submit" value="Cadastrar" onclick="Cadastrar()">
-            
+    <div id="formulario">
+        <form action="/savepoint" method="POST">
+            <h1>Cadastro</h1>
+
+            <fieldset>
+                <div class="field">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" name="name" required>
+                </div>
+
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="username">Username</label><input type="text" name="username" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">E-mail</label><input type="email" name="email" required>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="senha">Senha</label><input type="password" name="senha" required>
+                    </div>
+                    <div class="field">
+                        <label for="confirmaSenha">Confirme sua senha</label><input type="password" name="confirmaSenha"
+                            required>
+                    </div>
+                </div>
+                <a href="./login.html"><span>Já está cadastrado?</span></a>
+            </fieldset>
+            <button type="submit">Cadastrar ponto de coleta</button>
         </form>
     </div>
-    <br>
-    <br><br><br>
-    <br><br><br>
-    <div class="footer">
-        Feito por Rafael dos Santos
-    </div>
 </body>
+
 </html>

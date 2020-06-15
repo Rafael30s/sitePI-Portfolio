@@ -1,0 +1,225 @@
+#header2{
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+#header2 header{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header2 header a{
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    color: var(--vermelhoRei);
+    font-weight: 700;
+}
+
+#header2 header a span{
+    margin-right: 16px;
+    display: flex;
+    background-image: url('../imagens/icones/log-in.svg');
+    width: 20px;
+    height: 20px;
+}
+
+#header2 .logo{
+    font-size: 32px;
+    font-family: 'Squada One', cursive;
+    float: left;
+    color: var(--preto);
+    margin: 0;
+    padding: 10px 20px;
+    font-weight: 700;
+
+}
+#header2 .logo span{
+    padding: 20px 0;
+    color: var(--vermelhoRei);
+    font-family: 'Squada One', cursive;
+    margin: 0;
+    font-family: 'Sen', sans-serif;
+}
+
+#formulario {
+    width: 100%;
+    max-width: 1100px;
+  
+    margin: 0 auto;
+  }
+  
+  #formulario header {
+    margin-top: 48px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #formulario header a {
+    color: var(--preto);
+    font-weight: bold;
+    text-decoration: none;
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  #formulario header a svg {
+    margin-right: 16px;
+    color: var(--vermelhoRei);
+  }
+  
+  #formulario form {
+    margin: 40px auto;
+    padding: 32px 64px 64px;
+    max-width: 730px;
+    background: #FFF;
+    border-radius: 8px;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #formulario form h1 {
+    font-size: 36px;
+  }
+  
+  #formulario form fieldset {
+    margin-top: 32px;
+    min-inline-size: auto;
+    border: 0;
+  }
+
+  #formulario form fieldset span{
+    font-size: 14px;
+    color: #372C39;
+    float: right;
+  }
+  
+  #formulario form fieldset span:active,
+  #formulario form fieldset span:hover{
+      text-decoration: underline;
+  }
+  
+  #formulario form legend {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  #formulario form legend h2 {
+    font-size: 24px;
+  }
+  
+  #formulario form legend span {
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--preto);
+  }
+  
+  #formulario form .field-group {
+    flex: 1;
+    display: flex;
+  }
+  
+  #formulario form .field {
+    flex: 1;
+  
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  
+  #formulario form .field input[type=text],
+  #formulario form .field input[type=email],
+  #formulario form .field input[type=password] {
+    flex: 1;
+    background: #F0F0F5;
+    border-radius: 8px;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    color: #6C6C80;
+  }
+  
+  #formulario form .field select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    flex: 1;
+    background: #F0F0F5;
+    border-radius: 8px;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    color: #6C6C80;
+  }
+  
+  #formulario form .field input::placeholder {
+    color: #A0A0B2;
+  }
+  
+  #formulario form .field label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  #formulario form .field :disabled {
+    cursor: not-allowed;
+  }
+  
+  #formulario form .field-group .field + .field {
+    margin-left: 24px;
+  }
+  
+  #formulario form .field-group input + input {
+    margin-left: 24px;
+  }
+  
+  #formulario form .field-check {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #formulario form .field-check input[type=checkbox] {
+    background: #F0F0F5;
+  }
+  
+  #formulario form .field-check label {
+    margin: 0 0 0 8px;
+  }
+  
+  #formulario form .leaflet-container {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+  }
+  
+  #formulario form button {
+    width: 260px;
+    height: 56px;
+    background: var(--vermelhoRei);
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    align-self: flex-end;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  
+  #formulario form button:hover {
+    background: rgb(160, 42, 42);
+  }
+  

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Lobster&family=Squada+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/perfil.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/modalHistoria.css">
+    <link rel="stylesheet" href="../CSS/modalSenha.css">
+
+
+
+    <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
+
+    <title>Stories Kingdom</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div>
+                <h1 class="logo">Stories<span>Kingdom</span></h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li>
+                        <i class="fas fa-user" onclick="Perfil()"></i>
+                    </li>
+                    <li><i class="fas fa-sign-out-alt" onclick="Fechar()"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="modalSenha"class="hide" >
+        <div class="content">
+
+            <form action="/" method="POST">
+                <div class="logon">
+                    <h1>Redefinir Senha</h1>
+                    <a href="#">Fechar</a>
+                </div> 
+                <div class="field-group">
+                    <div class="field">
+                        <label for="senha">Senha atual</label><input type="password" name="senha" required>
+                    </div>
+                    <div class="field">
+                        <label for="senha">Nova senha</label><input type="password" name="senha" required>
+                    </div>
+                    <div class="field">
+                        <label for="confirmaSenha">Confirme sua senha</label><input type="password" name="confirmaSenha"
+                            required>
+                    </div>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+    </div>
+    <div id="modalHistoria" class="hide">
+        <div class="content">
+            <a href="#">Fechar</a>
+            <div class="ajuste">
+                <div class="logon">
+                    <h1>Escolha o tipo de História</h1>
+                </div>
+                <div class="box">
+                    <div class="select ">
+                        <img src="../imagens/historia.png" alt="">
+                        <h2>História/Texto</h2>
+                    </div>
+                    <div class="select bloqueado">
+                        <img src="../imagens/video.png" alt="">
+                        <h2>Video</h2>
+                    </div>
+                    <div class="select bloqueado">
+                        <img src="../imagens/quadrinhos.png" alt="">
+                        <h2>Quadrinho</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="perfil">
+
+        <main>
+            <div class="perfilForm">
+                <h2 class="perfilTitulo">Perfil</h2>
+                <div class="perfilCard">
+
+                    <div class="foto">
+                        <div class="imagem">
+                            <img src="../imagens/user.svg" alt="Avatar" class="image">
+                            <div class="overlay">Alterar imagem</div>
+                        </div>
+                        <img class="overlay" alt="">
+                        <div class="overlay"></div>
+                    </div>
+
+                    <div class="info">
+                        <form action="/savepoint" method="POST">
+                            <fieldset>
+                                <div class="field">
+                                    <label for="name">Nome Completo</label>
+                                    <input type="text" name="name" required>
+                                </div>
+
+
+                                <div class="field-group">
+                                    <div class="field">
+                                        <label for="username">Username</label><input type="text" name="username"
+                                            required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="email">E-mail</label><input type="email" name="email" required>
+                                    </div>
+                                    <a href="#" id="redefinirSenha">Redefir senha</a>
+                                </div>
+                            </fieldset>
+                            <button type="submit">Salvar</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="infoHistoria">
+                <h4>
+                    <strong>3 historias</strong> cadastradas
+                </h4>
+
+                <div>
+                    <i id="CadastrarHistoria" class="fas fa-plus-circle" onclick="CadastrarH()"></i>
+                </div>
+            </div>
+
+
+
+            <div class="cards">
+
+                <div class="card">
+                    <img src="../imagens/default3.png" alt="RecyclePoint">
+                    <h1>Historia1</h1>
+                    <h3>Rafael dos Santos
+                    </h3>
+                    <p>
+                        Descrição da historia
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="../imagens/default1.png" alt="RecyclePoint">
+                    <h1>Historia2</h1>
+                    <h3>Rafael dos Santos
+                    </h3>
+                    <p>
+                        Descrição da historia
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="../imagens/default2.jpg" alt="RecyclePoint">
+                    <h1>Historia3</h1>
+                    <h3>Rafael dos Santos
+                    </h3>
+                    <p>
+                        Descrição da historia
+                    </p>
+                </div>
+            </div>
+
+
+
+        </main>
+    </div>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/perfil.js"></script>
+
+</body>

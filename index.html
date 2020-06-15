@@ -4,40 +4,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Lobster&family=Squada+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Portifolio</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/modal.css">
+    <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
+
+    <title>Stories Kingdom</title>
 </head>
 
 <body>
     <div class="header">
         <div class="container">
             <div>
-                <h1 class="titulo"><span>Portfolio</span></h1>
+                <h1 class="logo">Stories<span>Kingdom</span></h1>
             </div>
             <div class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Projetos</a></li>
                     <li> <a href="pages/cadastro.html">Cadastro</a>
                     </li>
-                    <li><a href="pages/login.html">Login</a></li>
+                    <li><a id="login" href="#">Login</a></li>
                 </ul>
             </div>
         </div>
     </div>
-   
-    <div class="showcase">
-        <div class="container2">
-            <h1>Seu Portfolio Online</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus vero quibusdam libero. Nesciunt est harum at, perspiciatis minima optio sunt nemo, nulla libero, similique nam laboriosam. Incidunt ipsa sint a!
-            </p>
+
+    <div class="container layout">
+        <div>
+            <h1 class="titulo">Stories Kingdom</h1>
+            <h2 class="sub-titulo">Um reino de ideias</h2>
         </div>
     </div>
+
+    <div id="modal"class="hide" >
+        <div class="content">
+
+            <form action="/" method="POST">
+                <div class="logon">
+                    <h1>Login</h1>
+                    <a href="#">Fechar</a>
+                </div> 
     
-    <div class="footer">
-        Feito por Rafael dos Santos
+                <fieldset>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" required>
+                    </div>
+    
+                    <a href="./pages/cadastro.html"><span>Não está cadastrado?</span></a>
+                </fieldset>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
     </div>
-    
+    <div class="content">
+        <h2>Como historias mudam o mundo?</h2>
+        <div class="space">
+            <img src="./imagens/capaHome.svg" alt="">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam ab assumenda, blanditiis modi rem
+                corrupti
+                officia quam eum explicabo iure iste dolorum voluptates, molestias et delectus nostrum nisi unde earum!
+                Officiis vel odit labore ullam eveniet laborum dolore illo consequuntur ducimus rerum praesentium
+                adipisci
+                eos ab asperiores voluptatum sequi temporibus, alias aspernatur quam. Quas aliquam tempore vitae tempora
+                rerum a.
+                Earum quisquam ut eos maxime blanditiis quam fugit recusandae libero at qui, corporis aperiam unde
+                reiciendis eveniet accusamus tenetur illum! Recusandae voluptatum similique quisquam aut culpa mollitia
+                aliquid, in nam.
+                Alias recusandae modi impedit magnam aspernatur corporis molestias maiores ea pariatur culpa fuga beatae
+                at
+                labore quasi ad, ipsum in accusantium reprehenderit tenetur necessitatibus. Officiis repellat dolores
+                quaerat cum libero.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam ab assumenda, blanditiis modi rem
+                corrupti
+                officia quam eum explicabo iure iste dolorum voluptates, molestias et delectus nostrum nisi unde earum!
+                Officiis vel odit labore ullam eveniet laborum dolore illo consequuntur ducimus rerum praesentium
+                adipisci
+                eos ab asperiores voluptatum sequi temporibus, alias aspernatur quam. Quas aliquam tempore vitae tempora
+                rerum a.
+                Earum quisquam ut eos maxime blanditiis quam fugit recusandae libero at qui, corporis aperiam unde
+                reiciendis eveniet accusamus tenetur illum! Recusandae voluptatum similique quisquam aut culpa mollitia
+                aliquid, in nam.
+                Alias recusandae modi impedit magnam aspernatur corporis molestias maiores ea pariatur culpa fuga beatae
+                at
+                labore quasi ad, ipsum in accusantium reprehenderit tenetur necessitatibus. Officiis repellat dolores
+                quaerat cum libero.
+            </p>
+        </div>
+
+
+        <h2>Projetos</h2>
+
+        <div class="grid">
+
+            <figure>
+                <img class="img-portfolio" src="./imagens/starlordCapa.jpg" alt="StarLord Capa">
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="./imagens/mascara.jpg" alt="Jacquees">
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="./imagens/tabula.jpg" alt="Alicia">
+            </figure>
+        </div>
+
+        <h2>Onde podemos encontrar historias?</h2>
+        <div class="space">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam ab assumenda, blanditiis modi rem
+                corrupti
+                officia quam eum explicabo iure iste dolorum voluptates, molestias et delectus nostrum nisi unde earum!
+                Officiis vel odit labore ullam eveniet laborum dolore illo consequuntur ducimus rerum praesentium
+                adipisci
+                eos ab asperiores voluptatum sequi temporibus, alias aspernatur quam. Quas aliquam tempore vitae tempora
+                rerum a.
+                Earum quisquam ut eos maxime blanditiis quam fugit recusandae libero at qui, corporis aperiam unde
+                reiciendis eveniet accusamus tenetur illum! Recusandae voluptatum similique quisquam aut culpa mollitia
+                aliquid, in nam.
+                Alias recusandae modi impedit magnam aspernatur corporis molestias maiores ea pariatur culpa fuga beatae
+                at
+                labore quasi ad, ipsum in accusantium reprehenderit tenetur necessitatibus. Officiis repellat dolores
+                quaerat cum libero.
+            </p>
+            <img src="./imagens/capaHome.svg" alt="">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam ab assumenda, blanditiis modi rem
+                corrupti
+                officia quam eum explicabo iure iste dolorum voluptates, molestias et delectus nostrum nisi unde earum!
+                Officiis vel odit labore ullam eveniet laborum dolore illo consequuntur ducimus rerum praesentium
+                adipisci
+                eos ab asperiores voluptatum sequi temporibus, alias aspernatur quam. Quas aliquam tempore vitae tempora
+                rerum a.
+                Earum quisquam ut eos maxime blanditiis quam fugit recusandae libero at qui, corporis aperiam unde
+                reiciendis eveniet accusamus tenetur illum! Recusandae voluptatum similique quisquam aut culpa mollitia
+                aliquid, in nam.
+                Alias recusandae modi impedit magnam aspernatur corporis molestias maiores ea pariatur culpa fuga beatae
+                at
+                labore quasi ad, ipsum in accusantium reprehenderit tenetur necessitatibus. Officiis repellat dolores
+                quaerat cum libero.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam ab assumenda, blanditiis modi rem
+                corrupti
+                officia quam eum explicabo iure iste dolorum voluptates, molestias et delectus nostrum nisi unde earum!
+                Officiis vel odit labore ullam eveniet laborum dolore illo consequuntur ducimus rerum praesentium
+                adipisci
+                eos ab asperiores voluptatum sequi temporibus, alias aspernatur quam. Quas aliquam tempore vitae tempora
+                rerum a.
+                Earum quisquam ut eos maxime blanditiis quam fugit recusandae libero at qui, corporis aperiam unde
+                reiciendis eveniet accusamus tenetur illum! Recusandae voluptatum similique quisquam aut culpa mollitia
+                aliquid, in nam.
+                Alias recusandae modi impedit magnam aspernatur corporis molestias maiores ea pariatur culpa fuga beatae
+                at
+                labore quasi ad, ipsum in accusantium reprehenderit tenetur necessitatibus. Officiis repellat dolores
+                quaerat cum libero.
+            </p>
+        </div>
+
+    </div>
+
+        <div class="footer">
+            <div class="icons">
+                <a target="_blank" href="https://github.com/Rafael30s">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a target="_blank" href="mailto:rafael.santos@bandtec.com.br?subject=Hello%20again">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/Rafael30s/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        
+
+
+     
+
 </body>
+<script src="./scripts/index.js"></script>
 
 </html>

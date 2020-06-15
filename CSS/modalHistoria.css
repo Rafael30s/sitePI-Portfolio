@@ -1,0 +1,72 @@
+#modalHistoria {
+    z-index: 3;
+    background-color: #0E0A14ef;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+}
+
+#modalHistoria.hide{
+    display: none;
+}
+#modalHistoria .content{
+    color:white;
+    width: 720px;
+}
+
+#modalHistoria .ajuste{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#modalHistoria .logon {
+    width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalHistoria a {
+    background-image: url("../imagens/icones/xWhite.svg");
+    float: right;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    font-size: 0.01px;
+    color: white;
+}
+
+#modalHistoria .logon h1{
+    color: white;
+    font-size: 42px;
+    line-height: 42px;
+}
+
+#modalHistoria img{
+    width: 150px;
+}
+
+#modalHistoria .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+#modalHistoria .select{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+#modalHistoria .bloqueado{
+    cursor: not-allowed;
+}

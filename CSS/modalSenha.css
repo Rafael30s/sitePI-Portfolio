@@ -1,0 +1,118 @@
+#modalSenha {
+    background-color: #0E0A14ef;
+    z-index: 3;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+}
+
+#modalSenha.hide{
+    display: none;
+}
+#modalSenha .content{
+    color:white;
+    width: 470px;
+}
+
+#modalSenha .logon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#modalSenha .logon a {
+    background-image: url("../imagens/icones/x.svg");
+    width: 20px;
+    height: 20px;
+    display: flex;
+    font-size: 0.01px;
+    color: black;
+}
+
+#modalSenha .logon h1{
+    color: black;
+    font-size: 42px;
+    line-height: 42px;
+}
+
+#modalSenha form {
+    margin: 30px auto;
+    padding: 32px 42px;
+    max-width: 730px;
+    background: #FFF;
+    border-radius: 8px;
+  
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+#modalSenha form fieldset {
+    margin-top: 32px;
+    min-inline-size: auto;
+    border: 0;
+  }
+  #modalSenha form .field {
+    flex: 1;
+  
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  
+  #modalSenha form fieldset span{
+    font-size: 14px;
+    color: var(--preto);
+    float: right;
+  }
+
+  #modalSenha form fieldset span:active,
+  #modalSenha form fieldset span:hover{
+      text-decoration: underline;
+  }
+  
+  #modalSenha form .field input[type=text],
+  #modalSenha form .field input[type=email],
+  #modalSenha form .field input[type=password] {
+    flex: 1;
+    background: #F0F0F5;
+    border-radius: 8px;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    color: #6C6C80;
+  }
+  #modalSenha form .field input::placeholder {
+    color: #A0A0B2;
+  }
+  
+  #modalSenha form .field label {
+      color: black;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  #modalSenha form button {
+    width: 260px;
+    height: 56px;
+    background: var(--vermelhoRei);
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    align-self: center;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  
+  #modalSenha form button:hover {
+    background: rgb(100, 26, 26);
+  }
+  
