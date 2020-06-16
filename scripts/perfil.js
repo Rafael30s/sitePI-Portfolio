@@ -20,4 +20,8 @@ buttonSearch2.addEventListener("click", () => {
 
 close2.addEventListener("click", ()=>{
     modal2.classList.add("hide");
-})
+});
+
+function CadastrarHistoria(){
+    window.location.href = "../pages/cadastroHistoria.html";
+}

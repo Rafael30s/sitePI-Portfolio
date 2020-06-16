@@ -1,0 +1,144 @@
+
+#formulario {
+    width: 100%;
+    max-width: 1100px;
+  
+    margin: 0 auto;
+  }
+  
+  #formulario header {
+    margin-top: 48px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #formulario header a {
+    color: var(--preto);
+    font-weight: bold;
+    text-decoration: none;
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  #formulario header a svg {
+    margin-right: 16px;
+    color: var(--vermelhoRei);
+  }
+  
+  #formulario form {
+    margin: 40px auto;
+    padding: 32px 64px 64px;
+    max-width: 730px;
+    background: #FFF;
+    border-radius: 8px;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #formulario form h1 {
+    font-size: 36px;
+  }
+  
+  #formulario form fieldset {
+    margin-top: 32px;
+    min-inline-size: auto;
+    border: 0;
+  }
+
+   
+  #formulario form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  
+  #formulario form .field input[type=text]{
+    flex: 1;
+    background: #F0F0F5;
+    border-radius: 8px;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    color: #6C6C80;
+  }
+  #formulario form .field textarea{
+    resize: vertical;
+    background: #F0F0F5;
+    border-radius: 8px;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    color: #6C6C80;
+  }
+
+  #formulario form .field input::placeholder {
+    color: #A0A0B2;
+  }
+  
+  #formulario form .field label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+
+  #formulario form button {
+    width: 260px;
+    height: 56px;
+    background: var(--vermelhoRei);
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    align-self: flex-end;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  
+  #formulario form button:hover {
+    background: rgb(160, 42, 42);
+  }
+  
+
+  .dropzone {
+    height: 300px;
+    background: #ffe3e3;
+    border-radius: 10px;
+    cursor: not-allowed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+  }
+  
+  .dropzone img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+  }
+  
+  .dropzone p {
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    border-radius: 10px;
+    border: 1px dashed #590202ef;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+  }
+  
+  .dropzone p svg {
+    color: #590202;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+  }

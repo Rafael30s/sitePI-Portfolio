@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Lobster&family=Squada+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/formularioHistoria.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
+
+
+
+    <title>Stories Kingdom</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div>
+                <h1 class="logo">Stories<span>Kingdom</span></h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li>
+                        <i class="fas fa-user" onclick="Perfil()"></i>
+                    </li>
+                    <li><i class="fas fa-sign-out-alt" onclick="Fechar()"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="formulario">
+        <form action="/savepoint" method="POST">
+            <h1>Cadastro de História</h1>
+
+            <fieldset>
+                <div class="field">
+                    <label for="name">Titulo</label>
+                    <input type="text" name="name" required>
+                </div>
+
+                <div class="field">
+                    <label for="name">Descrição</label>
+                    <textarea name="name"  required></textarea>
+                </div>
+                <div class="field">
+                    <label for="name">História</label>
+                    <textarea name="name" required></textarea>
+                </div>
+                <div class="field">
+                    <label for="name">Capa</label>
+                    <div class="dropzone" tabindex="0">
+
+                        <input type="file" autocomplete="off" accept="image/*" tabindex="-1" style="display: none;">
+                        <p>
+                            <svg stroke="var(--vermelhoRei)" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            Imagem do estabelecimento 
+                        </p>
+                        </div>
+                </div>
+
+
+
+            </fieldset>
+            <button type="submit">Cadastrar ponto de coleta</button>
+        </form>
+    </div>
+</body>
+
+</html>
