@@ -63,8 +63,8 @@ opacity: 1;
 
 .grid figure img:active,
 .grid figure img:hover{
-   width: 380px;
-    max-height: 230px;
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 .footer {

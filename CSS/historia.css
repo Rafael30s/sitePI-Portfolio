@@ -1,0 +1,24 @@
+body{
+    background-color: var(--branco);
+}
+
+
+
+.content{
+  line-height: 30px;
+  text-indent:2em;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content h2{
+  text-align: center;
+}
+.content .autor{
+ text-align: right;
+ margin-bottom: 15px;
+ display: block;
+}
+.content img{
+  margin: 15px 20px 10px 0;
+}
