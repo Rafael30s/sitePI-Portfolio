@@ -114,4 +114,16 @@
   #modal form button:hover {
     background: rgb(100, 26, 26);
   }
-  
+
+  #modal.point .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal.point .content h1{
+    color: white;
+    margin-top: 32px;
+    text-align: center;
+}

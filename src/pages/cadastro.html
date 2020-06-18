@@ -10,6 +10,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/formulario.css">
+    <link rel="stylesheet" href="../CSS/modal.css">
 
     <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
 
@@ -23,13 +24,13 @@
         </header>
     </div>
     <div id="formulario">
-        <form action="/savepoint" method="POST">
+        <form action="/cadastrar" method="POST">
             <h1>Cadastro</h1>
 
             <fieldset>
                 <div class="field">
-                    <label for="name">Nome Completo</label>
-                    <input type="text" name="name" required>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" name="nome" required>
                 </div>
 
 
@@ -55,6 +56,11 @@
             <button type="submit">Cadastrar ponto de coleta</button>
         </form>
     </div>
+    {% block modal %}
+    {% if saved %}
+    {% include "partials/modalCadastro.html" %}
+    {% endif %}
+    {% endblock modal %}
 </body>
 
 </html>
