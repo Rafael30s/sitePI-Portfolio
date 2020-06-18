@@ -11,3 +11,14 @@ close.addEventListener("click", ()=>{
     modal.classList.add("hide");
 })
 
+function ExemploTexto(){
+    window.location.href = "/exemploTexto";
+}
+
+function ExemploVideo(){
+    window.location.href = "/exemploTexto";
+}
+
+function ExemploQuad(){
+    window.location.href = "/exemploTexto";
+}
