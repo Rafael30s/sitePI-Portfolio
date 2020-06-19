@@ -11,8 +11,6 @@ server.use(express.static("public"));
 
 // let idUser = document.cookie = '';
 
-// habilitar o uso do req.body na nossa aplicação
-server.use(express.urlencoded({ extended: true }));
 
 // utilizando template engine
 const nunjucks = require("nunjucks");
@@ -20,6 +18,10 @@ nunjucks.configure("src/pages", {
     express: server,
     noCache: true
 });
+
+// habilitar o uso do req.body na nossa aplicação
+server.use(express.urlencoded({ extended: true }));
+
 server.get("/", (req, res) => {
     return res.render("index.html");
 });
@@ -75,6 +77,29 @@ server.get("/login", (req, res) => {
     // console.log(idUser);
 
     return res.render("login.html");
+});
+
+server.post("/login", (req, res) => {
+    // let idUser = document.cookie = 'teste';
+
+    // console.log(idUser);
+    console.log(req.body);
+   
+    var username = req.body.username; // depois de .body, use o nome (name) do campo em seu formulário de username
+	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de username	
+	
+    let instrucaoSql = `select * from user where username='${username}' and senha='${senha}'`;
+    let idTest;
+    console.log(instrucaoSql);
+    
+
+    db.get(instrucaoSql, function(err,row){
+        console.log(row);
+        idTest=row.idUser;
+    });
+    // db.run(query, values, afterInsertData);
+
+    return res.render("perfil.html", {id: idTest});
 });
 
 server.get("/perfil", (req, res) => {
