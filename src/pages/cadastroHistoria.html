@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/formularioHistoria.css">
     <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/modal.css">
     <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
 
 
@@ -37,22 +38,22 @@
         </div>
     </div>
     <div id="formulario">
-        <form action="/savepoint" method="POST">
+        <form action="/cadastrarHistoria" method="POST">
             <h1>Cadastro de História</h1>
 
             <fieldset>
                 <div class="field">
                     <label for="name">Titulo</label>
-                    <input type="text" name="name" required>
+                    <input type="text" name="titulo" required>
                 </div>
 
                 <div class="field">
                     <label for="name">Descrição</label>
-                    <textarea name="name"  required></textarea>
+                    <textarea name="desc"  required></textarea>
                 </div>
                 <div class="field">
                     <label for="name">História</label>
-                    <textarea name="name" required></textarea>
+                    <textarea name="historia" required></textarea>
                 </div>
                 <div class="field">
                     <label for="name">Capa</label>
@@ -72,6 +73,7 @@
             <button type="submit">Cadastrar ponto de coleta</button>
         </form>
     </div>
+ 
 </body>
 
 </html>

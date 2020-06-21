@@ -1,5 +1,9 @@
 const express = require("express");
 const server = express();
+let idTest;
+let nomeTest;
+let usernameTest;
+let emailTest;
 
 // pegar o banco de dados
 const db = require("./database/db");
@@ -11,6 +15,7 @@ server.use(express.static("public"));
 
 // let idUser = document.cookie = '';
 
+// ejs
 
 // utilizando template engine
 const nunjucks = require("nunjucks");
@@ -35,7 +40,7 @@ server.get("/cadastrar", (req, res) => {
 server.post("/cadastrar", (req, res) => {
 
     console.log(req.body);
-    let validar_senha = (req.body.senha = req.body.confirmaSenha);
+    let validar_senha = (req.body.senha == req.body.confirmaSenha);
     
     if (validar_senha) {
         const query = `
@@ -89,21 +94,39 @@ server.post("/login", (req, res) => {
 	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de username	
 	
     let instrucaoSql = `select * from user where username='${username}' and senha='${senha}'`;
-    let idTest;
+    
     console.log(instrucaoSql);
     
 
     db.get(instrucaoSql, function(err,row){
-        console.log(row);
-        idTest=row.idUser;
+       
+        if(err){
+            return res.render("login.html")
+        } else{
+            console.log(row.idUser);
+            idTest = row.idUser;
+            console.log(idTest);
+            nomeTest = row.nome;
+            usernameTest = row.username;
+            emailTest = row.email;
+        return res.render("perfil.html", {id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
+        }
+        // idTest=row[0].idUser;
     });
-    // db.run(query, values, afterInsertData);
 
-    return res.render("perfil.html", {id: idTest});
+ 
 });
 
 server.get("/perfil", (req, res) => {
-    return res.render("perfil.html");
+    console.log(sessionStorage.username);
+    db.all(`SELECT * FROM user WHERE username = '%${sessionStorage.username}%'`, function (err, rows) {
+        if (err) {
+            return console.log(err);
+        }
+        // const total = rows.length;
+        // mostrar a página html com os dados do banco
+        return res.render("perfil.html", {users: rows});
+    });
 });
 
 server.get("/exemploTexto", (req, res) => {
@@ -112,6 +135,45 @@ server.get("/exemploTexto", (req, res) => {
 
 server.get("/cadastrarHistoria", (req, res) => {
     return res.render("cadastroHistoria.html");
+});
+
+server.post("/cadastrarHistoria", (req, res) => {
+
+    console.log(req.body);
+    
+    let img = parseInt(Math.random() *3+1);
+    
+        const query = `
+        INSERT INTO Story (
+            titulo, 
+            descrição,
+            historia,
+            image,
+            fkUser
+        ) VALUES (?,?,?,?,?);
+    `;
+
+        const values = [
+            req.body.titulo,
+            req.body.desc,
+            req.body.historia,
+            img,
+            idTest
+        ]
+
+        function afterInsertData(err) {
+            if (err) {
+                return console.log(err);
+            }
+
+            console.log("Cadastrado com sucesso");
+            console.log(this);
+        }
+        db.run(query, values, afterInsertData);
+
+        return res.render("cadastroHistoria.html", {saved:true});
+    
+
 });
 
 server.get("/historia", (req, res) => {
