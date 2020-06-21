@@ -72,7 +72,7 @@ server.post("/cadastrar", (req, res) => {
         return res.render("cadastro.html", {saved:true});
     }
     else {
-        alert('Falha na confirmação de senha');
+        return console.log('Erro');
     }
 });
 
@@ -118,16 +118,33 @@ server.post("/login", (req, res) => {
 });
 
 server.get("/perfil", (req, res) => {
-    console.log(sessionStorage.username);
-    db.all(`SELECT * FROM user WHERE username = '%${sessionStorage.username}%'`, function (err, rows) {
+    console.log('pato');
+   console.log(idTest);
+    db.all(`SELECT * FROM story WHERE fkUser = '${idTest}'`, function (err, rows) {
         if (err) {
             return console.log(err);
         }
-        // const total = rows.length;
+        console.log('pato');
+        console.log(rows);
+        const total = rows.length;
         // mostrar a página html com os dados do banco
-        return res.render("perfil.html", {users: rows});
+        console.log(total)
+        return res.render("perfil.html", {users: rows, total, nome: nomeTest});
     });
 });
+
+server.get("/todas", (req, res) => {
+    console.log(idTest);
+     db.all(`SELECT * FROM story`, function (err, rows) {
+         if (err) {
+             return console.log(err);
+         }
+         const total = rows.length;
+         // mostrar a página html com os dados do banco
+         console.log(total)
+         return res.render("todasHistorias.html", {users: rows});
+     });
+ });
 
 server.get("/exemploTexto", (req, res) => {
     return res.render("infancia.html");
