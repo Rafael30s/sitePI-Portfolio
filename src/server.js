@@ -90,18 +90,18 @@ server.post("/login", (req, res) => {
     // console.log(idUser);
     console.log(req.body);
    
-    var username = req.body.username; // depois de .body, use o nome (name) do campo em seu formulário de username
-	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de username	
+    let username = req.body.username; // depois de .body, use o nome (name) do campo em seu formulário de username
+	let senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de username	
 	
-    let instrucaoSql = `select * from user where username='${username}' and senha='${senha}'`;
+    const instrucaoSql = `select * from user where username='${username}' and senha='${senha}'`;
     
     console.log(instrucaoSql);
     
 
-    db.get(instrucaoSql, function(err,row){
+    db.get(instrucaoSql, (err,row)=>{
        
-        if(err){
-            return res.render("login.html")
+        if(row == undefined){
+            return res.render("login.html",{erro: true});
         } else{
             console.log(row.idUser);
             idTest = row.idUser;
@@ -129,7 +129,7 @@ server.get("/perfil", (req, res) => {
         const total = rows.length;
         // mostrar a página html com os dados do banco
         console.log(total)
-        return res.render("perfil.html", {users: rows, total, nome: nomeTest});
+        return res.render("perfil.html", {users: rows, total, nome: nomeTest,username: usernameTest, email: emailTest});
     });
 });
 
