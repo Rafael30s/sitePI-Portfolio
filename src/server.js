@@ -215,4 +215,27 @@ server.get("/sair",(req,res)=>{
     logado=false;
     return res.render("index.html");
 })
+
+server.post("/alterar",(req,res)=>{
+    console.log(idTest);
+    let reNome = req.body.nome;
+    let reUsername = req.body.username;
+    let reEmail = req.body.email;
+
+    db.run(`UPDATE user
+    SET nome = '${reNome}', username = '${reUsername}', email = '${reEmail}'
+    WHERE idUser=${idTest}`, function (err, rows) {
+        if (err) {
+            return console.log(err);
+        }
+        // console.log(rows);
+        // nomeTest = rows.nome;
+        // usernameTest = rows.username;
+        // emailTest = rows.email;
+        
+        // mostrar a página html com os dados do banco
+        console.log(total)
+        return res.render("redirecionar.html",{users: rows, logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest})
+    });
+})
 server.listen(3000);

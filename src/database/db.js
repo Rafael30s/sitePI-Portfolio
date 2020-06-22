@@ -70,6 +70,14 @@ db.serialize(() => {
     //     console.log(rows);
     // })
 
+    // db.run(`UPDATE user
+    // SET nome = 'diovana' WHERE idUser=11`, function (err, rows) {
+    //     if (err) {
+    //         return console.log(err);
+    //     }
+    //     console.log('Dados alterados com sucesso');
+    // });
+
 //     // //4. Deletar um dado da tabela
     // db.run(`DELETE FROM user WHERE idUser = ?`, [10], function (err) {
     //     if (err) {

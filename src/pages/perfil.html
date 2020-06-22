@@ -58,7 +58,7 @@
                             required>
                     </div>
                 </div>
-                <button type="submit">Entrar</button>
+                <button type="submit" style="cursor: not-allowed;">Alterar</button>
             </form>
         </div>
 
@@ -106,11 +106,11 @@
                     </div>
 
                     <div class="info">
-                        <form action="/savepoint" method="POST">
+                        <form action="/alterar" method="POST">
                             <fieldset>
                                 <div class="field">
                                     <label for="name">Nome Completo</label>
-                                    <input type="text" name="name" id="txt_nome" value="{{ nome }}" required>
+                                    <input type="text" name="nome" id="txt_nome" value="{{ nome }}" required>
                                 </div>
 
 
@@ -127,7 +127,7 @@
                                     <a href="#" id="redefinirSenha">Redefir senha</a>
                                 </div>
                             </fieldset>
-                            <button type="submit" >Salvar</button>
+                            <button type="submit">Salvar</button>
                         </form>
 
                     </div>
@@ -185,7 +185,7 @@
             <div class="infoHistoria">
                
                 <h4>
-                    <strong>{{ total }} historias</strong> cadastradas
+                    <strong>{{ total }} histórias</strong> cadastradas
                 </h4>
 
                 <div>
@@ -214,7 +214,7 @@
             <div class="infoHistoria">
                
                 <h4>
-                    <strong>{{ total }} historias</strong> cadastradas
+                    <strong>Nenhuma </strong>história cadastrada
                 </h4>
 
                 <div>
