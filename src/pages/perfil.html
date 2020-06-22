@@ -20,7 +20,7 @@
     <title>Stories Kingdom</title>
 </head>
 
-<body onload="LerHistorias()">
+<body>
     <div class="header">
         <div class="container">
             <div>
@@ -134,7 +134,7 @@
                 </div>
                
             </div>
-            <div class="infoHistoria">
+            <!-- <div class="infoHistoria">
                 <h4>
                     <strong>3 historias</strong> cadastradas
                 </h4>
@@ -177,11 +177,11 @@
                         Descrição da historia
                     </p>
                 </div>
-            </div>
+            </div> -->
 
 
 
-            <!-- {% if total>0 %}
+            {% if total>0 %}
             <div class="infoHistoria">
                
                 <h4>
@@ -222,7 +222,7 @@
                 </div>
             </div>
 
-            {% endif %} -->
+            {% endif %}
 
         </main>
     </div>
@@ -232,11 +232,11 @@
 </body>
 </html>
 <script>
-    function LerHistorias(){
-    // const ufSelect = document.querySelector("select[name=uf]");
+    // function LerHistorias(){
+    // // const ufSelect = document.querySelector("select[name=uf]");
 
-    fetch("localhost:3000/perfil")
-    .then(res => res.json())
+    // fetch("localhost:3000/perfil")
+    // .then(res => res.json())
     // .then(states => {
     //     console.log('teste');
 
@@ -245,5 +245,5 @@
     //     // }
 
     // })
-}
+//}
 </script>

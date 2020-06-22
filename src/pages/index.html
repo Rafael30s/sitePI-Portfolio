@@ -17,22 +17,12 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="container">
-            <div>
-                <h1 class="logo">Stories<span>Kingdom</span></h1>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/todas">Historias</a></li>
-                    <li> <a href="/cadastrar">Cadastro</a>
-                    </li>
-                    <li><a id="login" href="#">Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    {% if logado %}
+    {% include "partials/headerLogado.html" %}
+    {% else %}
+    {% include "partials/header.html" %}
+    {% endif %}
+
 
     <div class="container layout">
         <div>
@@ -41,32 +31,8 @@
         </div>
     </div>
 
-    <div id="modal" class="hide">
-        <div class="content">
+    {% include "partials/modalLogin.html" %}
 
-            <form action="/login" method="POST">
-                <div class="logon">
-                    <h1>Login</h1>
-                    <a href="#">Fechar</a>
-                </div>
-
-                <fieldset>
-                    <div class="field">
-                        <label for="username">Username</label>
-                        <input type="text" name="username" id="input_username" required>
-                    </div>
-                    <div class="field">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" id="input_senha" required>
-                    </div>
-
-                    <a href="/cadastrar"><span>Não está cadastrado?</span></a>
-                </fieldset>
-                <button type="submit">Entrar</button>
-            </form>
-        </div>
-
-    </div>
     <div class="content">
         <h2>Como historias mudam o mundo?</h2>
         <div class="space">
@@ -159,6 +125,7 @@
 
 </body>
 <script src="./scripts/index.js"></script>
-
+<script src="../scripts/header.js"></script>
+<script src="../scripts/perfil.js"></script>
 
 </html>

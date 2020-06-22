@@ -20,23 +20,12 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="container">
-            <div>
-                <h1 class="logo">Stories<span>Kingdom</span></h1>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li>
-                        <i class="fas fa-user" onclick="Perfil()"></i>
-                    </li>
-                    <li><i class="fas fa-sign-out-alt" onclick="Fechar()"></i></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    {% if logado %}
+    {% include "partials/headerLogado.html" %}
+    {% else %}
+    {% include "partials/header.html" %}
+    {% endif %}
+    {% include "partials/modalLogin.html" %}
     <div id="formulario">
         <form action="/cadastrarHistoria" method="POST">
             <h1>Cadastro de História</h1>
@@ -75,5 +64,7 @@
     </div>
  
 </body>
-
+<script src="./scripts/index.js"></script>
+<script src="../scripts/header.js"></script>
+<script src="../scripts/perfil.js"></script>
 </html>

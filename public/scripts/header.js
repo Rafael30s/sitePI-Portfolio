@@ -1,9 +1,9 @@
 function Perfil() {
     console.log('teste');
-    window.location.href = "./perfil.html";
+    window.location.href = "/perfil";
 }
 
 function Fechar(){
-    window.location.href = "../index.html";
+    window.location.href = "/sair";
 
 }

@@ -4,6 +4,7 @@ let idTest;
 let nomeTest;
 let usernameTest;
 let emailTest;
+let logado = false;
 
 // pegar o banco de dados
 const db = require("./database/db");
@@ -28,7 +29,7 @@ nunjucks.configure("src/pages", {
 server.use(express.urlencoded({ extended: true }));
 
 server.get("/", (req, res) => {
-    return res.render("index.html");
+    return res.render("index.html",{ logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
 });
 
 server.get("/cadastrar", (req, res) => {
@@ -109,7 +110,8 @@ server.post("/login", (req, res) => {
             nomeTest = row.nome;
             usernameTest = row.username;
             emailTest = row.email;
-        return res.render("perfil.html", {id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
+            logado = true
+        return res.render("index.html", {logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
         }
         // idTest=row[0].idUser;
     });
@@ -118,7 +120,7 @@ server.post("/login", (req, res) => {
 });
 
 server.get("/perfil", (req, res) => {
-    console.log('pato');
+if(logado){    console.log('pato');
    console.log(idTest);
     db.all(`SELECT * FROM story WHERE fkUser = '${idTest}'`, function (err, rows) {
         if (err) {
@@ -129,8 +131,10 @@ server.get("/perfil", (req, res) => {
         const total = rows.length;
         // mostrar a página html com os dados do banco
         console.log(total)
-        return res.render("perfil.html", {users: rows, total, nome: nomeTest,username: usernameTest, email: emailTest});
-    });
+        return res.render("perfil.html", {logado: logado, users: rows, total, nome: nomeTest,username: usernameTest, email: emailTest});
+    });} else{
+        return res.render("index.html");
+    }
 });
 
 server.get("/todas", (req, res) => {
@@ -143,21 +147,21 @@ server.get("/todas", (req, res) => {
          const total = rows.length;
          // mostrar a página html com os dados do banco
          console.log(total)
-         return res.render("todasHistorias.html", {users: rows});
+         return res.render("todasHistorias.html", {users: rows, logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
      });
  });
 
 server.get("/exemploTexto", (req, res) => {
-    return res.render("infancia.html");
+    return res.render("infancia.html",{logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
 });
 
 server.get("/cadastrarHistoria", (req, res) => {
-    return res.render("cadastroHistoria.html");
+    return res.render("cadastroHistoria.html",{ logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
 });
 
 server.post("/cadastrarHistoria", (req, res) => {
 
-    console.log(req.body);
+ if(logado){  console.log(req.body);
     
     let img = parseInt(Math.random() *3+1);
     
@@ -189,8 +193,10 @@ server.post("/cadastrarHistoria", (req, res) => {
         }
         db.run(query, values, afterInsertData);
 
-        return res.render("cadastroHistoria.html", {saved:true});
-    
+        return res.render("cadastroHistoria.html", {saved:true, logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
+    } else{
+        return res.render("index.html");
+    }
 
 });
 
@@ -199,10 +205,14 @@ server.get("/historia", (req, res) => {
 });
 
 server.get("/exemploVideo", (req, res) => {
-    return res.render("mascara.html");
+    return res.render("mascara.html",{logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
 });
 
 server.get("/exemploQuadrinho", (req, res) => {
-    return res.render("cla.html");
+    return res.render("cla.html",{logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
 });
+server.get("/sair",(req,res)=>{
+    logado=false;
+    return res.render("index.html");
+})
 server.listen(3000);
