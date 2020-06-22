@@ -223,3 +223,16 @@
     background: rgb(160, 42, 42);
   }
   
+  .ajusteErro{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .m-erro{
+    color:  rgb(160, 42, 42);
+    background-color: #ffe3e3;
+    padding: 10px;
+    margin: 5px;
+    list-style: none;
+    font-weight: bold;
+    border-radius: 5px;
+}

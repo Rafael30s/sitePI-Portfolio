@@ -44,16 +44,18 @@
                 </div>
                 <div class="field-group">
                     <div class="field">
-                        <label for="senha">Senha</label><input type="password" name="senha" required>
+                        <label for="senha">Senha</label><input type="password" name="senha" id="senha" required>
                     </div>
                     <div class="field">
                         <label for="confirmaSenha">Confirme sua senha</label><input type="password" name="confirmaSenha"
-                            required>
+                            id="confirmaSenha" oninput="Validar()" required>
                     </div>
                 </div>
+                <div id="saida"></div>
+
                 <a href="/login"><span>Já está cadastrado?</span></a>
             </fieldset>
-            <button type="submit">Cadastrar ponto de coleta</button>
+            <button id="btn" type="submit">Cadastrar</button>
         </form>
     </div>
     {% block modal %}
@@ -62,5 +64,19 @@
     {% endif %}
     {% endblock modal %}
 </body>
+<script>
+    let validarSenha;
+    function Validar() {
+        validarSenha = (senha.value == confirmaSenha.value);
+        if (validarSenha) {
+            saida.innerHTML='';
+            btn.disabled = false;
+        } else {
+            saida.innerHTML = `<div class="ajusteErro" id="ajuste"><div id="erro" class="m-erro">Confirme sua senha corretamente! </div>  </div>`;
+            btn.disabled = true;
+
+        }
+    }
+</script>
 
 </html>
