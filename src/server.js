@@ -135,10 +135,11 @@ server.get("/perfil", (req, res) => {
 
 server.get("/todas", (req, res) => {
     console.log(idTest);
-     db.all(`SELECT * FROM story`, function (err, rows) {
+     db.all(`SELECT * FROM story, user where idUser=fkUser`, function (err, rows) {
          if (err) {
              return console.log(err);
          }
+         console.log(rows);
          const total = rows.length;
          // mostrar a página html com os dados do banco
          console.log(total)
