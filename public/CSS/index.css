@@ -32,6 +32,10 @@ opacity: 1;
     max-width: 1200px;
     margin: 0 auto;
 }
+/* .content h2{
+    color: #20202d;
+    font-weight: bold;
+} */
 .content img {
     width: 400px;
     float: right;
@@ -66,7 +70,33 @@ opacity: 1;
     transform: scale(1.2);
     cursor: pointer;
 }
-
+.tipos{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: space-around;
+   
+}
+.tipo{
+    display: flex;
+    flex-direction: column;
+    height: 405px;
+}
+.tipo img{
+    margin: 0;
+    width: 200px;
+}
+.tipo span{
+    color: var(--preto);
+    text-decoration: underline;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+.tipo p{
+    color: #20202d;
+    text-indent:0;
+    text-align: center;
+}
 .footer {
     text-align: center;
     position: absolute;

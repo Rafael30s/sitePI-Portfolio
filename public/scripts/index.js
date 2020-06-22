@@ -16,9 +16,9 @@ function ExemploTexto(){
 }
 
 function ExemploVideo(){
-    window.location.href = "/exemploTexto";
+    window.location.href = "/exemploVideo";
 }
 
 function ExemploQuad(){
-    window.location.href = "/exemploTexto";
+    window.location.href = "/exemploQuadrinho";
 }

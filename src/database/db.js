@@ -61,17 +61,17 @@ db.serialize(() => {
    
 
 //     // //3. consultar os dados da tabela
-    // db.all(`SELECT * FROM user`, function (err, rows) {
-    //     if (err) {
-    //         return console.log(err);
-    //     }
+    db.all(`SELECT * FROM user`, function (err, rows) {
+        if (err) {
+            return console.log(err);
+        }
 
-    //     console.log("Aqui estão seus registros");
-    //     console.log(rows);
-    // })
+        console.log("Aqui estão seus registros");
+        console.log(rows);
+    })
 
 //     // //4. Deletar um dado da tabela
-    // db.run(`DELETE FROM places WHERE id = ?`, [6], function (err) {
+    // db.run(`DELETE FROM user WHERE idUser = ?`, [10], function (err) {
     //     if (err) {
     //         return console.log(err)
     //     }

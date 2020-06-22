@@ -23,5 +23,5 @@ close2.addEventListener("click", ()=>{
 });
 
 function CadastrarHistoria(){
-    window.location.href = "../pages/cadastroHistoria.html";
+    window.location.href = "/cadastrarHistoria";
 }
