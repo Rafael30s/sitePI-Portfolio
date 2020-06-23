@@ -59,9 +59,14 @@
 
 
             </fieldset>
-            <button type="submit">Cadastrar ponto de coleta</button>
+            <button type="submit">Cadastrar história</button>
         </form>
     </div>
+    {% block modal %}
+    {% if saved %}
+    {% include "partials/modalCadastro2.html" %}
+    {% endif %}
+    {% endblock modal %}
  
 </body>
 <script src="./scripts/index.js"></script>

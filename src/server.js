@@ -200,6 +200,10 @@ server.post("/cadastrarHistoria", (req, res) => {
 
 });
 
+server.get("/salvo", (req, res) => {
+    return res.render("index.html",{saved:true, logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
+});
+
 server.get("/historia", (req, res) => {
     return res.render("layoutHistoria.html");
 });
@@ -234,7 +238,7 @@ server.post("/alterar",(req,res)=>{
         // emailTest = rows.email;
         
         // mostrar a página html com os dados do banco
-        console.log(total)
+        //console.log(total)
         return res.render("redirecionar.html",{users: rows, logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest})
     });
 })

@@ -71,6 +71,7 @@
         if (validarSenha) {
             saida.innerHTML='';
             btn.disabled = false;
+            btn.style.cursor = 'pointer';
         } else {
             saida.innerHTML = `<div class="ajusteErro" id="ajuste"><div id="erro" class="m-erro">Confirme sua senha corretamente! </div>  </div>`;
             btn.disabled = true;

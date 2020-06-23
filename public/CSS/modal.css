@@ -14,8 +14,9 @@
     display: none;
 }
 #modal .content{
-    color:white;
-    width: 420px;
+  text-indent: 0;
+  color:white;
+  width: 420px;
 }
 
 #modal .logon {
