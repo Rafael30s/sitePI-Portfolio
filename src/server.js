@@ -201,7 +201,7 @@ server.post("/cadastrarHistoria", (req, res) => {
 });
 
 server.get("/salvo", (req, res) => {
-    return res.render("index.html",{saved:true, logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
+    return res.render("perfil.html",{saved:true, logado: logado, id: idTest,nome: nomeTest,username: usernameTest, email: emailTest});
 });
 
 server.get("/historia", (req, res) => {
